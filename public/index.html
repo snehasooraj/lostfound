@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>College Lost & Found Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="top-nav py-3 shadow-sm">
+    <div class="container d-flex justify-content-between align-items-center gap-3">
+        <h3 class="m-0 fw-bold site-title h6">College Lost & Found</h3>
+
+        <input type="text" id="searchBar-nav" class="form-control search-input"
+            placeholder="Search for items...">
+
+        <button class="btn btn-warning fw-bold text-nowrap" data-bs-toggle="modal" data-bs-target="#reportModal">
+            + Report Item
+        </button>
+    </div>
+</nav>
+
+<header class="hero-section text-white position-relative">
+    
+    <div class="background">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+    </div>
+    
+    <div class="container text-center py-5 position-relative z-index-1">
+        <h1 class="display-4 fw-bold mb-2">Campus Lost & Found Portal</h1>
+        <p class="lead opacity-75 mb-0">Helping students and staff reunite with their belongings</p>
+    </div>
+</header>
+
+<div class="container mb-4 mt-4">
+    <h4 class="fw-bold mb-2">Recent Items</h4>
+    <div class="d-flex justify-content-between align-items-center">
+        <p class="text-muted small m-0">Browse through lost and found items on campus</p>
+        <div class="col-md-2">
+            <select id="filterStatus" class="form-select form-select-sm">
+                <option value="all">Show All Items</option>
+                <option value="lost">Only Lost</option>
+                <option value="found">Only Found</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<div class="container pb-5">
+    <div class="row" id="itemsList"></div>
+</div>
+
+<div class="modal fade" id="reportModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content rounded-4 shadow">
+            <div class="modal-header">
+                <h5 class="modal-title text-primary">Report Lost or Found Item</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="itemForm" action="/items" method="POST" enctype="multipart/form-data">
+
+                    <label class="form-label required-label">Item Name</label>
+                    <input type="text" name="name" class="form-control mb-3" required>
+
+                    <label class="form-label">Item Photo</label>
+                    <div class="file-upload-box mb-3">
+                        <input type="file" name="image" id="imageUpload" accept="image/*">
+                        <div class="upload-icon-text">
+                            <i class="fas fa-upload"></i>
+                            <p>Click to upload or drag and drop</p>
+                            <small>PNG, JPG, WEBP up to 5MB</small>
+                        </div>
+                    </div>
+
+                    <label class="form-label required-label">Status</label>
+                    <select name="status" class="form-select mb-3" required>
+                        <option value="lost">Lost</option>
+                        <option value="found">Found</option>
+                    </select>
+
+                    <label class="form-label required-label">Description</label>
+                    <textarea name="description" class="form-control mb-3" rows="3" required></textarea>
+
+                    <label class="form-label required-label">Location</label>
+                    <input type="text" name="location" class="form-control mb-3" required>
+
+                    <label class="form-label required-label">Date & Time</label>
+                    <div class="row mb-3">
+                        <div class="col-6"><input type="date" name="date" class="form-control" required></div>
+                        <div class="col-6"><input type="time" name="time" class="form-control" required></div>
+                    </div>
+
+                    <label class="form-label required-label">Contact Email</label>
+                    <input type="email" name="contact" class="form-control mb-4" required>
+
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn btn-light me-2" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-warning fw-bold">Submit Report</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

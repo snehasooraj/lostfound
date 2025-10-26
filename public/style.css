@@ -1,0 +1,150 @@
+:root {
+    --accent-orange: #ff9800;
+    --accent-red: #e74c3c;
+    --accent-green: #2ecc71;
+    --bg-light: #e8eff1;
+}
+
+/* ---------------------------------------------------- */
+/* NEW ANIMATION STYLES */
+/* ---------------------------------------------------- */
+
+@keyframes move {
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+}
+
+.background {
+    /* Changed from fixed to absolute so it only covers the header */
+    position: absolute; 
+    width: 100%; /* Cover 100% of header width */
+    height: 100%; /* Cover 100% of header height */
+    top: 0;
+    left: 0;
+    background: #090113;
+    overflow: hidden;
+    z-index: 0; /* Ensure it stays behind the text */
+}
+
+.background span {
+    width: 20vmin;
+    height: 20vmin;
+    border-radius: 20vmin;
+    backface-visibility: hidden;
+    position: absolute;
+    animation: move;
+    /* FIX: Corrected animation-duration from 45 to 45s */
+    animation-duration: 45s; 
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* Individual span styling (no changes here, using your exact code) */
+.background span:nth-child(0) { color: #FFACAC; top: 2%; left: 69%; animation-duration: 24s; animation-delay: -23s; transform-origin: 13vw -21vh; box-shadow: 40vmin 0 5.580902260753598vmin currentColor; }
+.background span:nth-child(1) { color: #FFACAC; top: 61%; left: 16%; animation-duration: 27s; animation-delay: -19s; transform-origin: 8vw -17vh; box-shadow: -40vmin 0 5.67418934450361vmin currentColor; }
+.background span:nth-child(2) { color: #E45A84; top: 16%; left: 82%; animation-duration: 53s; animation-delay: -40s; transform-origin: -9vw -2vh; box-shadow: 40vmin 0 5.483964473576258vmin currentColor; }
+.background span:nth-child(3) { color: #FFACAC; top: 98%; left: 86%; animation-duration: 38s; animation-delay: -8s; transform-origin: 10vw 1vh; box-shadow: 40vmin 0 5.934632167101552vmin currentColor; }
+.background span:nth-child(4) { color: #FFACAC; top: 99%; left: 85%; animation-duration: 45s; animation-delay: -9s; transform-origin: 11vw 5vh; box-shadow: -40vmin 0 5.099083331695915vmin currentColor; }
+.background span:nth-child(5) { color: #583C87; top: 9%; left: 24%; animation-duration: 22s; animation-delay: -13s; transform-origin: -18vw -16vh; box-shadow: -40vmin 0 5.848261572837556vmin currentColor; }
+.background span:nth-child(6) { color: #583C87; top: 33%; left: 63%; animation-duration: 32s; animation-delay: -3s; transform-origin: 11vw -4vh; box-shadow: -40vmin 0 5.177889579830527vmin currentColor; }
+.background span:nth-child(7) { color: #583C87; top: 52%; left: 10%; animation-duration: 25s; animation-delay: -18s; transform-origin: -23vw -1vh; box-shadow: -40vmin 0 5.778894748409806vmin currentColor; }
+.background span:nth-child(8) { color: #FFACAC; top: 49%; left: 99%; animation-duration: 9s; animation-delay: -13s; transform-origin: 9vw 17vh; box-shadow: 40vmin 0 5.246944698445107vmin currentColor; }
+.background span:nth-child(9) { color: #583C87; top: 54%; left: 74%; animation-duration: 39s; animation-delay: -13s; transform-origin: -24vw 16vh; box-shadow: 40vmin 0 5.810875907459751vmin currentColor; }
+.background span:nth-child(10) { color: #FFACAC; top: 52%; left: 97%; animation-duration: 24s; animation-delay: -44s; transform-origin: 24vw 17vh; box-shadow: -40vmin 0 5.371180348173357vmin currentColor; }
+.background span:nth-child(11) { color: #583C87; top: 37%; left: 46%; animation-duration: 9s; animation-delay: -24s; transform-origin: -20vw 9vh; box-shadow: 40vmin 0 5.884660524274694vmin currentColor; }
+.background span:nth-child(12) { color: #FFACAC; top: 90%; left: 100%; animation-duration: 51s; animation-delay: -41s; transform-origin: -5vw 21vh; box-shadow: 40vmin 0 5.29403326048411vmin currentColor; }
+.background span:nth-child(13) { color: #E45A84; top: 97%; left: 9%; animation-duration: 36s; animation-delay: -36s; transform-origin: 22vw 3vh; box-shadow: -40vmin 0 5.711652018532596vmin currentColor; }
+.background span:nth-child(14) { color: #583C87; top: 32%; left: 59%; animation-duration: 32s; animation-delay: -26s; transform-origin: 7vw 6vh; box-shadow: 40vmin 0 5.039659523724099vmin currentColor; }
+.background span:nth-child(15) { color: #FFACAC; top: 64%; left: 89%; animation-duration: 45s; animation-delay: -25s; transform-origin: -12vw 2vh; box-shadow: -40vmin 0 5.386919719214202vmin currentColor; }
+.background span:nth-child(16) { color: #E45A84; top: 38%; left: 92%; animation-duration: 46s; animation-delay: -14s; transform-origin: 0vw 2vh; box-shadow: -40vmin 0 5.5480903937450945vmin currentColor; }
+.background span:nth-child(17) { color: #E45A84; top: 68%; left: 12%; animation-duration: 13s; animation-delay: -18s; transform-origin: 7vw 21vh; box-shadow: 40vmin 0 5.595905997688949vmin currentColor; }
+.background span:nth-child(18) { color: #E45A84; top: 33%; left: 48%; animation-duration: 51s; animation-delay: -42s; transform-origin: 14vw -7vh; box-shadow: 40vmin 0 5.871158391803355vmin currentColor; }
+.background span:nth-child(19) { color: #583C87; top: 72%; left: 37%; animation-duration: 48s; animation-delay: -42s; transform-origin: -16vw 2vh; box-shadow: 40vmin 0 5.5782327899385855vmin currentColor; }
+.background span:nth-child(20) { color: #583C87; top: 72%; left: 84%; animation-duration: 18s; animation-delay: -7s; transform-origin: 8vw 22vh; box-shadow: 40vmin 0 5.42945732484701vmin currentColor; }
+.background span:nth-child(21) { color: #E45A84; top: 15%; left: 74%; animation-duration: 42s; animation-delay: -5s; transform-origin: -19vw 18vh; box-shadow: -40vmin 0 5.1298597904755345vmin currentColor; }
+.background span:nth-child(22) { color: #583C87; top: 81%; left: 39%; animation-duration: 38s; animation-delay: -47s; transform-origin: -15vw 19vh; box-shadow: 40vmin 0 5.530438000633336vmin currentColor; }
+
+/* ---------------------------------------------------- */
+/* EXISTING LAYOUT STYLES */
+/* ---------------------------------------------------- */
+
+/* Hero Section: Removed old background image and added relative positioning */
+.hero-section {
+    /* REMOVED: background-image property */
+    background-size: cover; 
+    background-position: center;
+    padding: 100px 0 140px; 
+    position: relative; /* REQUIRED for animation to stay within header */
+    overflow: hidden; /* Prevent span shadows from bleeding */
+}
+/* Ensure the text is layered above the animation */
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Top Navigation */
+.top-nav {
+    background: #06031e;
+}
+
+/* KEY FIX: Grid setup and margin/padding adjustments */
+.top-nav .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Logo Styling */
+.site-title {
+    color: #ffffff;
+    font-size: 1.1rem !important;
+    margin-left: -10px !important; 
+    white-space: nowrap; 
+}
+
+/* Button Styling (Kept compact to prevent wrapping) */
+.btn-warning {
+    background-color: var(--accent-orange);
+    border: none;
+    padding: 0.5rem 0.8rem;
+    white-space: nowrap; 
+}
+
+/* Search Input */
+.search-input {
+    width: 100%;
+    border-radius: 12px;
+}
+html, body {
+    /* Ensures content taller than the viewport can be scrolled */
+    overflow-y: auto; 
+    /* Ensures the body/html tags can always extend to fit content */
+    min-height: 100vh;
+}
+/* Fix for the Report Item Modal scrolling */
+.modal-body {
+    /* Calculate the maximum height based on the viewport, subtracting space for the header/footer */
+    max-height: calc(100vh - 200px); 
+    /* Force a vertical scrollbar when the content exceeds the max-height */
+    overflow-y: auto; 
+}
+
+/* Optional: Forces the modal container to recognize the scroll state */
+.modal {
+    overflow-y: auto !important;
+}
+/* Other existing styles (omitted for brevity, but ensure they are included) */
+.required-label::after { content: " *"; color: var(--accent-red); }
+.file-upload-box { border: 2px dashed #ccc; padding: 20px; text-align: center; border-radius: 10px; }
+.file-upload-box:hover { border-color: var(--accent-orange); }
+.item-card { border: none; border-radius: .6rem; box-shadow: 0 4px 12px rgba(0,0,0,0.07); overflow: hidden; transition: .2s ease; }
+.item-card:hover { transform: translateY(-4px); }
+.item-img { height: 230px; width: 100%; object-fit: cover; }
+.item-status-badge { position: absolute; top: 10px; right: 10px; padding: .35rem .7rem; border-radius: .3rem; font-size: .8rem; color: #fff; }
+.status-lost { background-color: var(--accent-red); }
+.status-found { background-color: var(--accent-green); }
